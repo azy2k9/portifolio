@@ -8,10 +8,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid ${({ theme }) => theme.colors.secondary};
-`;
-
-const LogoContainer = styled.div`
-  display: flex;
   align-items: center;
   padding-left: 33px;
 `;
@@ -19,9 +15,7 @@ const LogoContainer = styled.div`
 const Header: React.FC = () => {
   return (
     <Container>
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
+      <Logo />
       <Navbar />
     </Container>
   );

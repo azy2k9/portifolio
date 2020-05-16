@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
-import LogoIcon from '../../assets/icons/Logo';
+import LogoIcon from '../../assets/illustrations/Logo';
 import HamburgerIcon from '../../assets/icons/Hamburger';
 
 const Container = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeroIcon from '../../assets/icons/Hero';
-import LogoAlternate from '../../assets/icons/LogoAlternate';
+import LogoAlternate from '../../assets/illustrations/LogoAlternate';
 import Typography from '../../components/Typography';
 
 const Container = styled.div`

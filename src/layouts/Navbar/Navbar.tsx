@@ -13,11 +13,13 @@ const Container = styled.div<Props>`
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    height: 90vh;
     padding-right: 0px;
-    * {
+    svg,
+    span {
       padding: 8px;
     }
-    background-color: ${({ theme }) => theme.colors.secondary};
+    background-color: ${({ theme }) => theme.colors.primary};
     padding-bottom: 8px;
     transform: translateY(-100%);
     z-index: -1;
@@ -33,7 +35,7 @@ const Container = styled.div<Props>`
 `;
 
 interface Props {
-  isOpen?: boolean,
+  isOpen?: boolean;
 }
 
 const Navbar: React.FC<Props> = (props: Props) => {

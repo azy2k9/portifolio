@@ -20,16 +20,16 @@ const Container = styled.div`
 `;
 
 const NavbarContainer = styled.div`
-    @media (max-width: 768px) {
-      display: none;
-    }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const MobileContainer = styled.div`
   display: none;
-    @media (max-width: 768px) {
-      display: unset;
-    }
+  @media (max-width: 768px) {
+    display: unset;
+  }
 `;
 
 const HamburgerContainer = styled.div`
@@ -46,14 +46,14 @@ const HamburgerContainer = styled.div`
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleNavbar = () => {
-    setIsOpen(prevIsOpen => !prevIsOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   return (
     <>
       <Container>
         <LogoIcon />
-        <HamburgerContainer onClick={e => handleNavbar()}>
+        <HamburgerContainer onClick={(e) => handleNavbar()}>
           <HamburgerIcon />
         </HamburgerContainer>
         <NavbarContainer>

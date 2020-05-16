@@ -7,15 +7,15 @@ const global = {
     fontSize: {
       base: 14,
       large: Math.ceil(14 * 1.25),
-      small: Math.ceil(14 * 0.85)
+      small: Math.ceil(14 * 0.85),
     },
     fontWeight: {
       light: 300,
       regular: 400,
       bold: 700,
       ultra: 900,
-    }
-  }
+    },
+  },
 };
 
 export const lightTheme = {
@@ -32,7 +32,7 @@ export const lightTheme = {
     black: '#000000',
     white: '#FFFFFF',
   },
-  ...global
+  ...global,
 };
 
 export const darkTheme = {
@@ -43,6 +43,5 @@ export const darkTheme = {
     headline: '#CDD5EF',
     paragraph: '#AAB4BE',
   },
-  ...global
+  ...global,
 };
-

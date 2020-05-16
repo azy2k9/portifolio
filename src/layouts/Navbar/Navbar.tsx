@@ -6,18 +6,20 @@ const Container = styled.div<Props>`
   display: flex;
   color: ${({ theme }) => theme.colors.headline};
   width: 300px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-right: 12px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    height: 100%;
     padding-right: 0px;
-    * {
+    svg,
+    span {
       padding: 8px;
     }
-    background-color: ${({ theme }) => theme.colors.secondary};
+    background-color: ${({ theme }) => theme.colors.primary};
     padding-bottom: 8px;
     transform: translateY(-100%);
     z-index: -1;
@@ -26,14 +28,14 @@ const Container = styled.div<Props>`
     transition: transform 0.5s ease-in-out;
     color:  ${({ theme }) => theme.colors.headline};
 
-    svg > g > path {
-      fill: ${({ theme }) => theme.colors.white};
+    svg {
+      width: 100px;
     }
   }
 `;
 
 interface Props {
-  isOpen?: boolean,
+  isOpen?: boolean;
 }
 
 const Navbar: React.FC<Props> = (props: Props) => {

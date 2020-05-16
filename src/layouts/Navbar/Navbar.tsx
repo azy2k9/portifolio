@@ -29,7 +29,8 @@ const Container = styled.div<Props>`
     color:  ${({ theme }) => theme.colors.headline};
 
     svg {
-      width: 100px;
+      height: 48px;
+      width: 48px;
     }
   }
 `;

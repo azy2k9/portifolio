@@ -9,6 +9,7 @@ import Hero from './layouts/Hero';
 const Container = styled.div`
   overflow-y: auto;
   position: relative;
+  z-index: -2;
 `;
 
 const App: React.FC = () => {

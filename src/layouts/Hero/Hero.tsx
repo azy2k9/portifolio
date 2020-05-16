@@ -12,7 +12,6 @@ const Container = styled.div`
   .hero-icon {
     width: 500px;
     height: 500px;
-    z-index: -2;
 
     @media (max-width: 768px) {
       width: 350px;

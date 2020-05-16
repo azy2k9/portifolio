@@ -4,6 +4,7 @@ import HomeIcon from '../../assets/icons/Home';
 
 const Container = styled.div<Props>`
   display: flex;
+  color: ${({ theme }) => theme.colors.headline};
   width: 300px;
   justify-content: space-between;
   padding-right: 12px;
@@ -23,9 +24,9 @@ const Container = styled.div<Props>`
     position: absolute;
     transform: ${({ isOpen }) => isOpen && 'translateY(0%)'};
     transition: transform 0.5s ease-in-out;
-    color: ${({ theme }) => theme.colors.white};
+    color:  ${({ theme }) => theme.colors.headline};
 
-    svg > g > path { 
+    svg > g > path {
       fill: ${({ theme }) => theme.colors.white};
     }
   }
@@ -40,7 +41,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
     <Container {...props}>
       <HomeIcon />
       <span>About</span>
-      <span>Portifolio</span>
+      <span>Portfolio</span>
       <span>Contact</span>
     </Container>
   );

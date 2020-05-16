@@ -22,7 +22,7 @@ export const lightTheme = {
   colors: {
     primary: '#3DA9FC',
     accent: '#EF4565',
-    secondary: '#90B4CE',
+    secondary: '#D6E5EF',
     background: '#FFFFFE',
     headline: '#2E5D7E',
     paragraph: '#5F6C7B',
@@ -38,7 +38,7 @@ export const lightTheme = {
 export const darkTheme = {
   colors: {
     ...lightTheme.colors,
-    secondary: '#D6E5EF',
+    secondary: '#90B4CE',
     background: '#465260',
     headline: '#CDD5EF',
     paragraph: '#AAB4BE',

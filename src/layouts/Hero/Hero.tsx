@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import HeroIcon from '../../assets/icons/Hero';
 import LogoAlternate from '../../assets/illustrations/LogoAlternate';
 import Typography from '../../components/Typography';
+import Button from '../../components/Button';
 
 const Container = styled.div`
   display: flex;
@@ -41,6 +42,15 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
+const CustomTypographyContainer = styled.div`
+  width: 100%;
+  padding-bottom: 24px;
+
+  @media (max-width: 768px) {
+    width: 250px;
+  }
+`;
+
 const Hero: React.FC = () => {
   return (
     <Container>
@@ -56,13 +66,14 @@ const Hero: React.FC = () => {
             Front End Developer
           </Typography>
           <br />
-          <Typography headingColor>
-            Living in Manchester 
-          </Typography>
-          <br />
-          <Typography headingColor>
-            Working @ <Link href="https://www.connexone.co.uk">ConnexOne</Link>
-          </Typography>
+          <CustomTypographyContainer>
+            <Typography headingColor>
+              Living in Manchester and Working @ <Link href="https://www.connexone.co.uk">ConnexOne</Link>
+            </Typography>
+          </CustomTypographyContainer>
+          <Button handleClick={() => { console.log('hello'); }} primary rounded>
+            Hire Me
+          </Button>
         </TextContainer>
       </HeroInfoContainer>
     </Container>

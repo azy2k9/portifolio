@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
 import LogoIcon from '../../assets/illustrations/Logo';
@@ -25,13 +25,6 @@ const NavbarContainer = styled.div`
   }
 `;
 
-const MobileContainer = styled.div`
-  display: none;
-  @media (max-width: 768px) {
-    display: unset;
-  }
-`;
-
 const HamburgerContainer = styled.div`
   display: none;
 
@@ -43,12 +36,11 @@ const HamburgerContainer = styled.div`
   }
 `;
 
-const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleNavbar = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
-  };
+interface Props {
+  handleNavbar: () => void
+}
 
+const Header: React.FC<Props> = ({ handleNavbar }: Props) => {
   return (
     <>
       <Container>
@@ -60,9 +52,6 @@ const Header: React.FC = () => {
           <Navbar />
         </NavbarContainer>
       </Container>
-      <MobileContainer>
-        <Navbar isOpen={isOpen} />
-      </MobileContainer>
     </>
   );
 };

@@ -5,9 +5,11 @@ const global = {
       secondary: '"Merriweather", serif',
     },
     fontSize: {
-      base: 14,
-      large: Math.ceil(14 * 1.25),
-      small: Math.ceil(14 * 0.85),
+      largest: Math.ceil(18 * 2.5),
+      large: Math.ceil(18 * 1.5),
+      base: 18,
+      small: Math.ceil(18 * 0.85),
+      smallest: Math.ceil(18 * 0.85),
     },
     fontWeight: {
       light: 300,

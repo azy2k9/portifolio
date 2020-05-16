@@ -8,6 +8,7 @@ const LogoAlternate: React.FC = () => {
       viewBox="0 0 120 65"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="logo-alternate"
     >
       <g clipPath="url(#clipLogoAlternate)">
         <path

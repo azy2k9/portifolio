@@ -8,9 +8,11 @@ declare module 'styled-components' {
         secondary: string,
       },
       fontSize: {
-        base: number,
+        largest: number,
         large: number,
+        base: number,
         small: number
+        smallest: number
       },
       fontWeight: {
         light: number,

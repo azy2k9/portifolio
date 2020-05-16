@@ -6,14 +6,14 @@ const Container = styled.div<Props>`
   display: flex;
   color: ${({ theme }) => theme.colors.headline};
   width: 300px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-right: 12px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 90vh;
+    height: 100%;
     padding-right: 0px;
     svg,
     span {
@@ -28,8 +28,8 @@ const Container = styled.div<Props>`
     transition: transform 0.5s ease-in-out;
     color:  ${({ theme }) => theme.colors.headline};
 
-    svg > g > path {
-      fill: ${({ theme }) => theme.colors.white};
+    svg {
+      width: 100px;
     }
   }
 `;

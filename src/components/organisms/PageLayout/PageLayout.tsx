@@ -45,7 +45,7 @@ const PageLayout: React.FC<Props> = (props: Props) => {
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyles />
-      <Header handleNavbar={handleNavbar} />
+      <Header handleNavbar={handleNavbar} isOpen={isOpen} />
       <MobileContainer isOpen={isOpen}>
         <Navbar isOpen={isOpen} />
       </MobileContainer>

@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroIcon from '../../assets/icons/Hero';
-import LogoAlternate from '../../assets/illustrations/LogoAlternate';
-import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import HeroIcon from '../../../assets/icons/Hero';
+import LogoAlternate from '../../../assets/illustrations/LogoAlternate';
+import { Heading, Button, Typography } from '../../atoms';
 
 const Container = styled.div`
   display: flex;
@@ -58,13 +57,9 @@ const Hero: React.FC = () => {
       <HeroInfoContainer>
         <LogoAlternate />
         <TextContainer>
-          <Typography headingSize headingColor>
-            Arslaan Qadus
-          </Typography>
+          <Heading>Arslaan Qadus</Heading>
           <br />
-          <Typography headingSize headingColor>
-            Front End Developer
-          </Typography>
+          <Heading>Front End Developer</Heading>
           <br />
           <CustomTypographyContainer>
             <Typography headingColor>

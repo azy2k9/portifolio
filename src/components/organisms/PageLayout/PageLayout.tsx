@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import HomeIcon from '../../assets/icons/Home';
 
 import Header from '../Header';
-import { GlobalStyles } from '../../styles/global';
-import { lightTheme } from '../../styles/theme';
+import { GlobalStyles } from '../../../styles/global';
+import { lightTheme } from '../../../styles/theme';
 import Navbar from '../Navbar';
 
 const Container = styled.div<Props>`
@@ -14,8 +13,8 @@ const Container = styled.div<Props>`
   transition: opacity 0.3s ease;
   z-index: 0;
   @media ${({ theme }) => theme.mediaQueries.mobile} {
-    opacity: ${({ isOpen }) => isOpen ? '0' : '1' };
-  };
+    opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+  }
 `;
 
 const MobileContainer = styled.div<Props>`
@@ -26,8 +25,8 @@ const MobileContainer = styled.div<Props>`
   top: 64px;
   bottom: 0;
   @media ${({ theme }) => theme.mediaQueries.mobile} {
-    display: ${({ isOpen }) => isOpen ? 'flex' : 'none' };
-  };
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  }
 `;
 
 interface Props {
@@ -46,15 +45,12 @@ const PageLayout: React.FC<Props> = (props: Props) => {
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyles />
-      <Header handleNavbar={handleNavbar} />
+      <Header handleNavbar={handleNavbar} isOpen={isOpen} />
       <MobileContainer isOpen={isOpen}>
         <Navbar isOpen={isOpen} />
       </MobileContainer>
-      <Container isOpen={isOpen}>
-        {children}
-      </Container>
+      <Container isOpen={isOpen}>{children}</Container>
     </ThemeProvider>
-
   );
 };
 

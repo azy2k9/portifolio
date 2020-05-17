@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import HomeIcon from '../../assets/icons/Home';
+import HomeIcon from '../../../assets/icons/Home';
 
 // Create the keyframes
 const slideDown = keyframes`

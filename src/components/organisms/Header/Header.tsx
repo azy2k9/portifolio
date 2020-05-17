@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
-import LogoIcon from '../../assets/illustrations/Logo';
-import HamburgerIcon from '../../assets/icons/Hamburger';
+import LogoIcon from '../../../assets/illustrations/Logo';
+import HamburgerIcon from '../../atoms/HamburgerButton';
 
 const Container = styled.div`
   height: 64px;
@@ -39,15 +39,16 @@ const HamburgerContainer = styled.div`
 
 interface Props {
   handleNavbar: () => void;
+  isOpen: boolean;
 }
 
-const Header: React.FC<Props> = ({ handleNavbar }: Props) => {
+const Header: React.FC<Props> = ({ handleNavbar, isOpen }: Props) => {
   return (
     <>
       <Container>
         <LogoIcon />
         <HamburgerContainer onClick={(e) => handleNavbar()}>
-          <HamburgerIcon />
+          <HamburgerIcon isOpen={isOpen} />
         </HamburgerContainer>
         <NavbarContainer>
           <Navbar />

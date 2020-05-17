@@ -6,7 +6,6 @@ import { lightTheme } from './styles/theme';
 import Hero from './layouts/Hero';
 import Navbar from './layouts/Navbar';
 
-
 const Container = styled.div`
   overflow-y: auto;
   position: relative;
@@ -15,7 +14,7 @@ const Container = styled.div`
 
 const MobileContainer = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     display: unset;
   }
 `;

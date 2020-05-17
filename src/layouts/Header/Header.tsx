@@ -13,14 +13,14 @@ const Container = styled.div`
   padding-left: 33px;
   background-color: ${({ theme }) => theme.colors.white};
 
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     padding-left: 0px;
     justify-content: center;
   }
 `;
 
 const NavbarContainer = styled.div`
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     display: none;
   }
 `;
@@ -28,7 +28,7 @@ const NavbarContainer = styled.div`
 const HamburgerContainer = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     display: unset;
     position: absolute;
     right: 10px;
@@ -37,7 +37,7 @@ const HamburgerContainer = styled.div`
 `;
 
 interface Props {
-  handleNavbar: () => void
+  handleNavbar: () => void;
 }
 
 const Header: React.FC<Props> = ({ handleNavbar }: Props) => {

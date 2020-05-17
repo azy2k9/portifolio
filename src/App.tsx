@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
-import Hero from './layouts/Hero';
-import PageLayout from './layouts/PageLayout';
+import React from 'react';
+import { Homepage } from './components/pages';
 
 const App: React.FC = () => {
-  return (
-    <PageLayout>
-      <Hero />
-    </PageLayout>
-  );
+  return <Homepage />;
 };
 
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TypographyContainer = styled.span<Props>`
+const TypographyContainer = styled.span<Typography>`
   font-weight: ${({ headingSize, theme }) =>
     headingSize && theme.font.fontWeight.bold};
   font-size: ${({ headingSize, theme }) =>
@@ -10,14 +10,7 @@ const TypographyContainer = styled.span<Props>`
   letter-spacing: 0.05rem;
 `;
 
-interface Props {
-  headingSize?: boolean;
-  headingColor?: boolean;
-  primary?: boolean;
-  children: React.ReactNode;
-}
-
-const Typography: React.FC<Props> = (props: Props) => {
+const Typography: React.FC<Typography> = (props: Typography) => {
   const { children } = props;
   return <TypographyContainer {...props}>{children}</TypographyContainer>;
 };

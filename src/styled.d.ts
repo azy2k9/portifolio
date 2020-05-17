@@ -15,10 +15,11 @@ declare module 'styled-components' {
         smallest: number
       },
       fontWeight: {
+        ultralight: number,
         light: number,
         regular: number,
         bold: number,
-        ultra: number,
+        ultrabold: number,
       }
     }
     colors: {

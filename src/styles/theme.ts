@@ -12,10 +12,11 @@ const global = {
       smallest: Math.ceil(18 * 0.85),
     },
     fontWeight: {
+      ultralight: 100,
       light: 300,
       regular: 400,
       bold: 700,
-      ultra: 900,
+      ultrabold: 900,
     },
   },
 };

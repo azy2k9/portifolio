@@ -15,14 +15,14 @@
   "rules": {
     "object-curly-spacing": ["warn", "always"],
     "no-unused-vars": [
-      "warn",
+      "error",
       {
         "vars": "all",
         "args": "none"
       }
     ],
     "@typescript-eslint/no-unused-vars": [
-      "warn",
+      "error",
       {
         "vars": "all",
         "args": "none"
@@ -51,7 +51,7 @@
     ],
     "react/jsx-key": "error",
     "import/no-extraneous-dependencies": [
-      "error",
+      "off",
       {
         "devDependencies": [
           "**/*.test.js",

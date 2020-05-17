@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ButtonContainer = styled.button<Props>`
+const ButtonContainer = styled.button<Button>`
   background-color: ${({ primary, theme }) => primary && theme.colors.primary};
   color: ${({ primary, theme }) => primary && theme.colors.white};
   border-radius: ${({ rounded, children }) =>
@@ -17,18 +17,11 @@ const ButtonContainer = styled.button<Props>`
   }
 `;
 
-interface Props {
-  handleClick: (e: React.MouseEvent) => void;
-  children: React.ReactNode;
-  primary?: boolean;
-  rounded?: boolean;
-}
-
-const Button: React.FC<Props> = (props: Props) => {
+const Button: React.FC<Button> = (props: Button) => {
   const { handleClick, children } = props;
 
   return (
-    <ButtonContainer onClick={handleClick} {...props}>
+    <ButtonContainer onClick={handleClick} type="button" {...props}>
       {children}
     </ButtonContainer>
   );

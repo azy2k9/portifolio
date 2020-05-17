@@ -13,8 +13,8 @@ const Container = styled.div<Props>`
   transition: opacity 0.3s ease;
   z-index: 0;
   @media ${({ theme }) => theme.mediaQueries.mobile} {
-    opacity: ${({ isOpen }) => isOpen ? '0' : '1' };
-  };
+    opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+  }
 `;
 
 const MobileContainer = styled.div<Props>`
@@ -25,8 +25,8 @@ const MobileContainer = styled.div<Props>`
   top: 64px;
   bottom: 0;
   @media ${({ theme }) => theme.mediaQueries.mobile} {
-    display: ${({ isOpen }) => isOpen ? 'flex' : 'none' };
-  };
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  }
 `;
 
 interface Props {
@@ -49,11 +49,8 @@ const PageLayout: React.FC<Props> = (props: Props) => {
       <MobileContainer isOpen={isOpen}>
         <Navbar isOpen={isOpen} />
       </MobileContainer>
-      <Container isOpen={isOpen}>
-        {children}
-      </Container>
+      <Container isOpen={isOpen}>{children}</Container>
     </ThemeProvider>
-
   );
 };
 

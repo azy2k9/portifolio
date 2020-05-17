@@ -57,13 +57,9 @@ const Hero: React.FC = () => {
       <HeroInfoContainer>
         <LogoAlternate />
         <TextContainer>
-          <Heading>
-            Arslaan Qadus
-          </Heading>
+          <Heading>Arslaan Qadus</Heading>
           <br />
-          <Heading>
-            Front End Developer
-          </Heading>
+          <Heading>Front End Developer</Heading>
           <br />
           <CustomTypographyContainer>
             <Typography headingColor>

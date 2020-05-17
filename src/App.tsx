@@ -6,7 +6,6 @@ import { lightTheme } from './styles/theme';
 import Hero from './layouts/Hero';
 import Navbar from './layouts/Navbar';
 
-
 const Container = styled.div`
   overflow-y: auto;
   position: relative;

@@ -37,7 +37,7 @@ const HamburgerContainer = styled.div`
 `;
 
 interface Props {
-  handleNavbar: () => void
+  handleNavbar: () => void;
 }
 
 const Header: React.FC<Props> = ({ handleNavbar }: Props) => {

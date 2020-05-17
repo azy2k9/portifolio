@@ -26,7 +26,7 @@ const Container = styled.div<Props>`
     position: absolute;
     transform: ${({ isOpen }) => isOpen && 'translateY(0%)'};
     transition: transform 0.5s ease-in-out;
-    color:  ${({ theme }) => theme.colors.headline};
+    color: ${({ theme }) => theme.colors.headline};
 
     svg {
       height: 48px;

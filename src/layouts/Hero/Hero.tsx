@@ -68,10 +68,17 @@ const Hero: React.FC = () => {
           <br />
           <CustomTypographyContainer>
             <Typography headingColor>
-              Living in Manchester and Working @ <Link href="https://www.connexone.co.uk">ConnexOne</Link>
+              Living in Manchester and Working @{' '}
+              <Link href="https://www.connexone.co.uk">ConnexOne</Link>
             </Typography>
           </CustomTypographyContainer>
-          <Button handleClick={() => { console.log('hello'); }} primary rounded>
+          <Button
+            handleClick={() => {
+              console.log('hello');
+            }}
+            primary
+            rounded
+          >
             Hire Me
           </Button>
         </TextContainer>

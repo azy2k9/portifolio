@@ -41,6 +41,8 @@ export const lightTheme = {
     error: '#FF4D4F',
     black: '#000000',
     white: '#FFFFFF',
+    twitter: '#55ACEE',
+    linkedIn: '#0077B5',
   },
   ...global,
 };

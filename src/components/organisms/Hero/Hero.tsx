@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroIcon from '../../../assets/icons/Hero';
-import LogoAlternate from '../../../assets/illustrations/LogoAlternate';
-import { Heading, Button, Typography } from '../../atoms';
+import { Heading, Typography } from '../../atoms';
 
 const Container = styled.div`
   display: flex;
@@ -36,11 +34,6 @@ const TextContainer = styled.div`
   padding-top: 2rem;
 `;
 
-const Link = styled.a`
-  color: ${({ theme }) => theme.colors.primary};
-  text-decoration: none;
-`;
-
 const CustomTypographyContainer = styled.div`
   width: 100%;
   padding-bottom: 24px;
@@ -50,32 +43,46 @@ const CustomTypographyContainer = styled.div`
   }
 `;
 
-const Hero: React.FC = () => {
+const ButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Hero: React.FC<Hero> = ({
+  heading,
+  subHeading,
+  heroImage,
+  description,
+  heroLogo,
+  primaryButton,
+  secondaryButton,
+  tertiaryButton,
+}: Hero) => {
+  const descriptionToRender =
+    typeof description === 'string' ? (
+      <Typography>{description}</Typography>
+    ) : (
+      description
+    );
+
   return (
     <Container>
-      <HeroIcon />
+      {heroImage}
       <HeroInfoContainer>
-        <LogoAlternate />
+        {heroLogo}
         <TextContainer>
-          <Heading>Arslaan Qadus</Heading>
+          <Heading>{heading}</Heading>
           <br />
-          <Heading>Front End Developer</Heading>
+          <Heading>{subHeading}</Heading>
           <br />
           <CustomTypographyContainer>
-            <Typography headingColor>
-              Living in Manchester and Working @{' '}
-              <Link href="https://www.connexone.co.uk">ConnexOne</Link>
-            </Typography>
+            {descriptionToRender}
           </CustomTypographyContainer>
-          <Button
-            handleClick={() => {
-              console.log('hello');
-            }}
-            primary
-            rounded
-          >
-            Hire Me
-          </Button>
+          <ButtonsContainer>
+            {primaryButton}
+            {secondaryButton}
+            {tertiaryButton}
+          </ButtonsContainer>
         </TextContainer>
       </HeroInfoContainer>
     </Container>

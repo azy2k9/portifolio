@@ -12,6 +12,7 @@ const Container = styled.div`
   align-items: center;
   padding-left: 33px;
   background-color: ${({ theme }) => theme.colors.white};
+  z-index: 1000;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
     padding-left: 0px;

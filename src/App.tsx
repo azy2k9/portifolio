@@ -14,7 +14,7 @@ const Container = styled.div`
 
 const MobileContainer = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     display: unset;
   }
 `;

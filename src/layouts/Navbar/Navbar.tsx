@@ -9,7 +9,7 @@ const Container = styled.div<Props>`
   justify-content: space-evenly;
   padding-right: 12px;
 
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     flex-direction: column;
     align-items: center;
     width: 100vw;

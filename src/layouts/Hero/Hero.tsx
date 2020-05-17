@@ -14,7 +14,7 @@ const Container = styled.div`
     width: 500px;
     height: 500px;
 
-    @media (max-width: 768px) {
+    @media ${({ theme }) => theme.mediaQueries.mobile} {
       width: 350px;
       height: 350px;
     }
@@ -28,7 +28,7 @@ const HeroInfoContainer = styled.div`
   padding-left: 5rem;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     padding-left: 3.5rem;
   }
 `;
@@ -46,7 +46,7 @@ const CustomTypographyContainer = styled.div`
   width: 100%;
   padding-bottom: 24px;
 
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
     width: 250px;
   }
 `;

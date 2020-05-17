@@ -19,6 +19,13 @@ const global = {
       ultrabold: 900,
     },
   },
+  mediaQueries: {
+    smallMobile: '(max-width: 480px)',
+    bigMobile: '(max-width: 768px)',
+    mobile: '(max-width: 480px), (max-width: 768px)',
+    tablet: '(max-width: 992px)',
+    laptop: '(max-width: 1200px)',
+  },
 };
 
 export const lightTheme = {

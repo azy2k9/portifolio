@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import HomeIcon from '../../assets/icons/Home';
 
 import Header from '../Header';
-import { GlobalStyles } from '../../styles/global';
-import { lightTheme } from '../../styles/theme';
+import { GlobalStyles } from '../../../styles/global';
+import { lightTheme } from '../../../styles/theme';
 import Navbar from '../Navbar';
 
 const Container = styled.div<Props>`

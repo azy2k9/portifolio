@@ -36,14 +36,14 @@ const StyledHamburgerIcon = styled.svg<Props>`
 
 interface Props {
   isOpen: boolean;
-  handleClick: () => void
+  handleClick: () => void;
 }
 
 const HamburgerButton: React.FC<Props> = (props: Props) => {
   const { handleClick } = props;
 
   return (
-    <HamburgerContainer onClick={_ => handleClick && handleClick()}>
+    <HamburgerContainer onClick={(_) => handleClick && handleClick()}>
       <StyledHamburgerIcon
         viewBox="0 0 100 100"
         height="42"

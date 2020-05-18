@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeroIcon from '../../../assets/icons/Hero';
-import { PageLayout, Hero } from '../../organisms';
+import { Hero } from '../../organisms';
 import { Typography, Button } from '../../atoms';
 import LogoAlternate from '../../../assets/illustrations/LogoAlternate';
 
@@ -12,7 +12,7 @@ const Link = styled.a`
 
 const Homepage: React.FC = () => {
   return (
-    <PageLayout>
+    <>
       <Hero
         heroImage={<HeroIcon />}
         heroLogo={<LogoAlternate />}
@@ -30,7 +30,7 @@ const Homepage: React.FC = () => {
           </Button>
         }
       />
-    </PageLayout>
+    </>
   );
 };
 

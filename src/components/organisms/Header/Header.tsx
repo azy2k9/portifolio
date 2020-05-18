@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
 import LogoIcon from '../../../assets/illustrations/Logo';
-import HamburgerIcon from '../../atoms/HamburgerButton';
+import HamburgerButton from '../../atoms/HamburgerButton';
 
 const Container = styled.div`
   height: 64px;
@@ -26,17 +26,6 @@ const NavbarContainer = styled.div`
   }
 `;
 
-const HamburgerContainer = styled.div`
-  display: none;
-
-  @media ${({ theme }) => theme.mediaQueries.mobile} {
-    display: unset;
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-  }
-`;
-
 interface Props {
   handleNavbar: () => void;
   isOpen: boolean;
@@ -47,9 +36,7 @@ const Header: React.FC<Props> = ({ handleNavbar, isOpen }: Props) => {
     <>
       <Container>
         <LogoIcon />
-        <HamburgerContainer onClick={(e) => handleNavbar()}>
-          <HamburgerIcon isOpen={isOpen} />
-        </HamburgerContainer>
+        <HamburgerButton isOpen={isOpen} handleClick={handleNavbar} />
         <NavbarContainer>
           <Navbar />
         </NavbarContainer>

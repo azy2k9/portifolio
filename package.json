@@ -78,6 +78,7 @@
     "prettier": "2.0.5",
     "prettier-eslint": "9.0.1",
     "prettier-eslint-cli": "5.0.0",
-    "react-docgen-typescript-loader": "^3.7.2"
+    "react-docgen-typescript-loader": "^3.7.2",
+    "storybook-dark-mode": "^0.4.1"
   }
 }

@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-
-import Header from '../Header';
-import { GlobalStyles } from '../../../styles/global';
 import { lightTheme } from '../../../styles/theme';
-import Navbar from '../Navbar';
+import { GlobalStyles } from '../../../styles/global';
+import { Header, Navbar } from '../../organisms';
 
-const Container = styled.div<Props>`
-  display: flex;
-  overflow-y: auto;
-  position: relative;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-  @media ${({ theme }) => theme.mediaQueries.mobile} {
-    opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
-  }
-`;
+interface WrapperProps {
+  children: React.ReactNode;
+  isOpen?: boolean;
+}
 
-const MobileContainer = styled.div<Props>`
+const MobileContainer = styled.div<WrapperProps>`
   flex-grow: 1;
   display: none;
   z-index: 100;
@@ -29,19 +21,23 @@ const MobileContainer = styled.div<Props>`
   }
 `;
 
-interface Props {
-  children: React.ReactNode;
-  isOpen?: boolean;
-}
+const Container = styled.div<WrapperProps>`
+  display: flex;
+  overflow-y: auto;
+  position: relative;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
+    opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+  }
+`;
 
-const PageLayout: React.FC<Props> = (props: Props) => {
+const Wrapper: React.FC<WrapperProps> = ({ children }: WrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const { children } = props;
-
   const handleNavbar = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
+
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyles />
@@ -54,4 +50,4 @@ const PageLayout: React.FC<Props> = (props: Props) => {
   );
 };
 
-export default PageLayout;
+export default Wrapper;

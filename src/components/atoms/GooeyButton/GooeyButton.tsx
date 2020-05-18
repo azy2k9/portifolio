@@ -44,7 +44,6 @@ const SlowMoTopLeft3 = keyframes`
   }
 `;
 
-
 const SlowMoBottomRight1 = keyframes`
   0% {
     transform: translate(0, 0) scale(1);
@@ -101,24 +100,12 @@ const EffectContainer = styled.span`
   z-index: 1;
 `;
 
-const CircleTopLeft = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
-  top: 40%;
-  left: 27%;
-`;
-
 const CircleTopLeft1 = styled.span`
   position: absolute;
   width: 25px;
   height: 25px;
   border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
+  background-color: ${({ theme }) => theme.colors.accent};
   top: 40%;
   left: 27%;
 `;
@@ -128,8 +115,7 @@ const CircleTopLeft2 = styled.span`
   width: 25px;
   height: 25px;
   border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
+  background-color: ${({ theme }) => theme.colors.accent};
   top: 40%;
   left: 27%;
 `;
@@ -139,21 +125,9 @@ const CircleTopLeft3 = styled.span`
   width: 25px;
   height: 25px;
   border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
+  background-color: ${({ theme }) => theme.colors.accent};
   top: 40%;
   left: 27%;
-`;
-
-const CircleBottomRight = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
-  bottom: 40%;
-  right: 27%;
 `;
 
 const CircleBottomRight1 = styled.span`
@@ -161,8 +135,7 @@ const CircleBottomRight1 = styled.span`
   width: 25px;
   height: 25px;
   border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
+  background-color: ${({ theme }) => theme.colors.accent};
   bottom: 40%;
   right: 27%;
 `;
@@ -172,8 +145,7 @@ const CircleBottomRight2 = styled.span`
   width: 25px;
   height: 25px;
   border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
+  background-color: ${({ theme }) => theme.colors.accent};
   bottom: 40%;
   right: 27%;
 `;
@@ -183,12 +155,10 @@ const CircleBottomRight3 = styled.span`
   width: 25px;
   height: 25px;
   border-radius: 15px;
-  background: ${({ theme }) => theme.colors.accent};
-  transition: background 0.1s ease-out;
+  background-color: ${({ theme }) => theme.colors.accent};
   bottom: 40%;
   right: 27%;
 `;
-
 
 const EffectButton = styled.span<Props>`
   background-color: ${({ theme }) => theme.colors.accent};
@@ -208,10 +178,10 @@ const EffectButton = styled.span<Props>`
   left: 25%;
   z-index: 1;
   transform: translateY(-50%);
-  transition: background 0.1s ease, opacity 0.1s ease;
+  transition: background 0.3s ease, opacity 0.3s ease;
 `;
 
-const Goo = styled.svg<Props>`
+const Goo = styled.svg`
   position: absolute;
   visibility: hidden;
   width: 1px;
@@ -236,12 +206,12 @@ const CAButton = styled.button<Button>`
   outline: none;
   font-size: ${({ theme }) => `${theme.font.fontSize.small}px`};
   font-weight: ${({ theme }) => `${theme.font.fontWeight.ultralight}`};
-  transition: box-shadow 0.1s ease, background-color 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+  transition: box-shadow 0.1s ease, background 0.3s ease, transform 0.1s ease, opacity 0.3s ease;
   z-index: 2;
 
   :hover {
     border: 0;
-    background: ${({ theme }) => theme.colors.accent};
+    background-color: ${({ theme }) => theme.colors.accent};
     box-shadow: 0 4px 20px -2px ${({ theme }) => rgba(theme.colors.accent, 0.5)};
     transform: scale(1.05);
   }
@@ -288,7 +258,7 @@ const CAButton = styled.button<Button>`
   }
 `;
 
-const Button: React.FC<Button> = (props: Button) => {
+const GooeyButton: React.FC<Button> = (props: Button) => {
   const { handleClick, children } = props;
 
   return (
@@ -321,4 +291,4 @@ const Button: React.FC<Button> = (props: Button) => {
   );
 };
 
-export default Button;
+export default GooeyButton;

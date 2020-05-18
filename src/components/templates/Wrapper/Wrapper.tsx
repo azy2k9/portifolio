@@ -8,36 +8,36 @@ interface WrapperProps {
   children: React.ReactNode;
   isOpen?: boolean;
 }
-  
+
 const MobileContainer = styled.div<WrapperProps>`
-    flex-grow: 1;
-    display: none;
-    z-index: 100;
-    position: absolute;
-    top: 64px;
-    bottom: 0;
-    @media ${({ theme }) => theme.mediaQueries.mobile} {
-      display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
-    }
-  `;
-  
+  flex-grow: 1;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  }
+`;
+
 const Container = styled.div<WrapperProps>`
-    display: flex;
-    overflow-y: auto;
-    position: relative;
-    transition: opacity 0.3s ease;
-    z-index: 0;
-    @media ${({ theme }) => theme.mediaQueries.mobile} {
-      opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
-    }
-  `;
-  
+  display: flex;
+  overflow-y: auto;
+  position: relative;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
+    opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+  }
+`;
+
 const Wrapper: React.FC<WrapperProps> = ({ children }: WrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleNavbar = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
-  
+
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyles />

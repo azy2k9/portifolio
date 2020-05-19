@@ -25,7 +25,7 @@ const Homepage: React.FC = () => {
           </Typography>
         }
         primaryButton={
-          <Button handleClick={() => console.log('hello')} primary rounded>
+          <Button handleClick={() => console.log('hello')} borderRadius="rounded">
             Hire Me
           </Button>
         }

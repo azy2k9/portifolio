@@ -1,7 +1,7 @@
 type Button = {
   handleClick: (e: React.MouseEvent) => void;
   children: React.ReactNode;
-  primary?: boolean;
-  rounded?: boolean;
+  variant?: string;
+  borderRadius?: string;
   icon?: boolean;
 };

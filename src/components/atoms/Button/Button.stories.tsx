@@ -10,13 +10,37 @@ export default {
 };
 
 export const Primary = () => (
-  <Button primary handleClick={action('clicked')}>
+  <Button variant="primary" handleClick={action('clicked')}>
+    Hello
+  </Button>
+);
+
+export const Secondary = () => (
+  <Button variant="secondary" handleClick={action('clicked')}>
+    Hello
+  </Button>
+);
+
+export const Success = () => (
+  <Button variant="success" handleClick={action('clicked')}>
+    Hello
+  </Button>
+);
+
+export const Warning = () => (
+  <Button variant="warning" handleClick={action('clicked')}>
+    Hello
+  </Button>
+);
+
+export const Error = () => (
+  <Button variant="error" handleClick={action('clicked')}>
     Hello
   </Button>
 );
 
 export const Rounded = () => (
-  <Button primary rounded handleClick={action('clicked')}>
+  <Button borderRadius="rounded" handleClick={action('clicked')}>
     Hello
   </Button>
 );

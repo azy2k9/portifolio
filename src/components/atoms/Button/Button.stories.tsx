@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { action } from '@storybook/addon-actions';
 import Button from './Button';
+import Twitter from '../../../assets/icons/Social/Twitter';
 
 export default {
   title: 'Buttons',
@@ -48,5 +49,11 @@ export const Rounded = () => (
 export const Link = () => (
   <Button borderRadius="rounded" href="https://twitter.com">
     Go to twitter
+  </Button>
+);
+
+export const IconButton = () => (
+  <Button borderRadius="rounded" href="https://twitter.com">
+    <Twitter />
   </Button>
 );

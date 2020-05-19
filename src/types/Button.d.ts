@@ -3,6 +3,5 @@ type Button = {
   children: React.ReactNode;
   variant?: string;
   borderRadius?: string;
-  icon?: boolean;
   href?: string;
 };

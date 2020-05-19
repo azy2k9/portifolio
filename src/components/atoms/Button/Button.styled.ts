@@ -46,6 +46,7 @@ const StyledButton = styled.button<Button>`
   padding: 8px 30px;
   font-size: ${({ theme }) => `${theme.font.fontSize.small}px`};
   font-weight: ${({ theme }) => `${theme.font.fontWeight.ultralight}`};
+  font-family: ${({ theme }) => theme.font.fontFamily.primary};
   border: 0px;
 
   :hover {
@@ -54,7 +55,6 @@ const StyledButton = styled.button<Button>`
 `;
 
 export const Link = styled(StyledButton).attrs({ as: 'a' })`
-  background-color: green;
   text-decoration: none;
   text-align: center;
 `;

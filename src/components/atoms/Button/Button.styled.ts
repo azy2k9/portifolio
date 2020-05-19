@@ -1,29 +1,29 @@
 import styled, { DefaultTheme } from 'styled-components';
 
 interface Styles {
-  variant?: string,
-  theme: DefaultTheme
-  borderRadius?: string,
-  children?: React.ReactNode
+  variant?: string;
+  theme: DefaultTheme;
+  borderRadius?: string;
+  children?: React.ReactNode;
 }
 
 const variantColor = ({ variant, theme }: Styles) => {
   let variantBackgroundColour = theme.colors.primary;
   const variantTextColor = theme.colors.white;
   switch (variant) {
-    case 'primary': 
+    case 'primary':
       variantBackgroundColour = theme.colors.primary;
       break;
-    case 'secondary': 
+    case 'secondary':
       variantBackgroundColour = theme.colors.secondary;
       break;
-    case 'success': 
+    case 'success':
       variantBackgroundColour = theme.colors.success;
       break;
-    case 'error': 
+    case 'error':
       variantBackgroundColour = theme.colors.error;
       break;
-    case 'warning': 
+    case 'warning':
       variantBackgroundColour = theme.colors.warning;
       break;
   }
@@ -33,7 +33,7 @@ const variantColor = ({ variant, theme }: Styles) => {
 const borderVariant = ({ borderRadius, children }: Styles) => {
   if (borderRadius === 'rounded')
     return children && children.toString().length * 3;
-    
+
   return 0;
 };
 

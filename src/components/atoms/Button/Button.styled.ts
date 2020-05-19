@@ -32,15 +32,6 @@ const variantColor = ({ variant, theme }: Styles) => {
   return [variantBackgroundColour, variantTextColor];
 };
 
-// const borderVariant = ({ borderRadius, children }: Styles) => {
-//   if (borderRadius === 'rounded')
-//     return children && children.toString().length * 3;
-
-//   return 0;
-// };
-
-/* border-radius: ${(props: Styles) => `${borderVariant(props)}px`}; */
-
 const StyledButton = styled.button<Button>`
   background-color: ${(props: Styles) => variantColor(props)[0]};
   color: ${(props: Styles) => variantColor(props)[1]};

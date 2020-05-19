@@ -160,7 +160,7 @@ const CircleBottomRight3 = styled.span`
   right: 27%;
 `;
 
-const EffectButton = styled.span<Props>`
+const EffectButton = styled.span<{ rounded: boolean }>`
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.white};
   border: 0;
@@ -176,7 +176,7 @@ const EffectButton = styled.span<Props>`
   height: 25%;
   top: 50%;
   left: 25%;
-  z-index: 1;
+  z-index: -1;
   transform: translateY(-50%);
   transition: background 0.3s ease, opacity 0.3s ease;
 `;
@@ -200,6 +200,7 @@ const CAButton = styled.button<Button>`
   box-shadow: 0 2px 8px -1px ${({ theme }) => rgba(theme.colors.primary, 0.4)};
   border-radius: ${({ rounded, children }) => rounded && children && '9999px'};
   cursor: pointer;
+  display: flex;
   letter-spacing: 0.1rem;
   padding: 8px 30px;
   position: relative;
@@ -258,8 +259,10 @@ const CAButton = styled.button<Button>`
   }
 `;
 
+
+
 const GooeyButton: React.FC<Button> = (props: Button) => {
-  const { handleClick, children } = props;
+  const { handleClick, children, rounded } = props;
 
   return (
     <>
@@ -281,7 +284,7 @@ const GooeyButton: React.FC<Button> = (props: Button) => {
           <CircleTopLeft1 />
           <CircleTopLeft2 />
           <CircleTopLeft3 />
-          <EffectButton {...props} />
+          <EffectButton rounded={!!rounded} />
           <CircleBottomRight1 />
           <CircleBottomRight2 />
           <CircleBottomRight3 />

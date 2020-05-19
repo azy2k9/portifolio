@@ -2,7 +2,7 @@ import React from 'react';
 import HamburgerButton from './HamburgerButton';
 
 export default {
-  title: 'Buttons',
+  title: 'Hamburguer Button',
   parameters: {
     info: { inline: true },
   },

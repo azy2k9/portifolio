@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeroIcon from '../../../assets/icons/Hero';
 import { Hero } from '../../organisms';
-import { Typography, Button } from '../../atoms';
+import { Typography, GooeyButton } from '../../atoms';
 import LogoAlternate from '../../../assets/illustrations/LogoAlternate';
 
 const Link = styled.a`
@@ -25,12 +25,9 @@ const Homepage: React.FC = () => {
           </Typography>
         }
         primaryButton={
-          <Button
-            handleClick={() => console.log('hello')}
-            borderRadius="rounded"
-          >
+          <GooeyButton handleClick={() => console.log('hello')} primary rounded>
             Hire Me
-          </Button>
+          </GooeyButton>
         }
       />
     </>

@@ -44,3 +44,9 @@ export const Rounded = () => (
     Hello
   </Button>
 );
+
+export const Link = () => (
+  <Button borderRadius="rounded" href="https://twitter.com">
+    Go to twitter
+  </Button>
+);

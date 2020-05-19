@@ -46,10 +46,17 @@ const StyledButton = styled.button<Button>`
   padding: 8px 30px;
   font-size: ${({ theme }) => `${theme.font.fontSize.small}px`};
   font-weight: ${({ theme }) => `${theme.font.fontWeight.ultralight}`};
+  border: 0px;
 
   :hover {
     border: ${({ theme }) => `2px solid ${theme.colors.secondary}`};
   }
+`;
+
+export const Link = styled(StyledButton).attrs({ as: 'a' })`
+  background-color: green;
+  text-decoration: none;
+  text-align: center;
 `;
 
 export default StyledButton;

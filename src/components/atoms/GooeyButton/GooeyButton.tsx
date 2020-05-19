@@ -220,6 +220,8 @@ const variantColor = ({ variant, theme }: Styles) => {
     case 'warning':
       variantBackgroundColour = theme.colors.warning;
       break;
+    default:
+      variantBackgroundColour = theme.colors.primary;
   }
   return [variantBackgroundColour, variantTextColor];
 };

@@ -10,13 +10,13 @@ export default {
 };
 
 export const Primary = () => (
-  <GooeyButton primary handleClick={action('clicked')}>
+  <GooeyButton handleClick={action('clicked')}>
     Hello
   </GooeyButton>
 );
 
 export const Rounded = () => (
-  <GooeyButton primary rounded handleClick={action('clicked')}>
+  <GooeyButton borderRadius="rounded" handleClick={action('clicked')}>
     Hello
   </GooeyButton>
 );

@@ -10,9 +10,7 @@ export default {
 };
 
 export const Primary = () => (
-  <GooeyButton handleClick={action('clicked')}>
-    Hello
-  </GooeyButton>
+  <GooeyButton handleClick={action('clicked')}>Hello</GooeyButton>
 );
 
 export const Rounded = () => (

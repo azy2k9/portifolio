@@ -1,5 +1,5 @@
-import React, { Props } from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from 'react';
+import styled, { keyframes, DefaultTheme } from 'styled-components';
 import { rgba } from 'polished';
 
 const SlowMoTopLeft1 = keyframes`
@@ -94,7 +94,7 @@ const EffectContainer = styled.span`
   top: -150%;
   left: -50%;
   opacity: 0;
-  filter: url("#goo");
+  filter: url('#goo');
   transition: all 0.1s ease-out, opacity 0.1s ease;
   pointer-events: none;
   z-index: 1;
@@ -160,11 +160,12 @@ const CircleBottomRight3 = styled.span`
   right: 27%;
 `;
 
-const EffectButton = styled.span<{ rounded: boolean }>`
+const EffectButton = styled.span<{ borderRadius?: string }>`
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.white};
   border: 0;
-  border-radius: ${({ rounded }) => rounded && '9999px'};
+  border-radius: ${({ borderRadius }) =>
+    borderRadius === 'rounded' && '9999px'};
   cursor: pointer;
   letter-spacing: 0.1rem;
   padding: 8px 30px;
@@ -193,12 +194,45 @@ const ButtonContainer = styled.span`
   z-index: 2;
 `;
 
+interface Styles {
+  variant?: string;
+  theme: DefaultTheme;
+  borderRadius?: string;
+  children?: React.ReactNode;
+}
+
+const variantColor = ({ variant, theme }: Styles) => {
+  let variantBackgroundColour = theme.colors.primary;
+  const variantTextColor = theme.colors.white;
+  switch (variant) {
+    case 'primary':
+      variantBackgroundColour = theme.colors.primary;
+      break;
+    case 'secondary':
+      variantBackgroundColour = theme.colors.secondary;
+      break;
+    case 'success':
+      variantBackgroundColour = theme.colors.success;
+      break;
+    case 'error':
+      variantBackgroundColour = theme.colors.error;
+      break;
+    case 'warning':
+      variantBackgroundColour = theme.colors.warning;
+      break;
+    default:
+      variantBackgroundColour = theme.colors.primary;
+  }
+  return [variantBackgroundColour, variantTextColor];
+};
+
 const CAButton = styled.button<Button>`
-  background-color: ${({ primary, theme }) => primary && theme.colors.primary};
-  color: ${({ primary, theme }) => primary && theme.colors.white};
+  background-color: ${(props: Styles) => variantColor(props)[0]};
+  color: ${(props: Styles) => variantColor(props)[1]};
   border: 0;
   box-shadow: 0 2px 8px -1px ${({ theme }) => rgba(theme.colors.primary, 0.4)};
-  border-radius: ${({ rounded, children }) => rounded && children && '9999px'};
+  border-radius: ${({ borderRadius, children }: Styles) =>
+    borderRadius === 'rounded' && children && '9999px'};
   cursor: pointer;
   display: flex;
   letter-spacing: 0.1rem;
@@ -207,7 +241,8 @@ const CAButton = styled.button<Button>`
   outline: none;
   font-size: ${({ theme }) => `${theme.font.fontSize.small}px`};
   font-weight: ${({ theme }) => `${theme.font.fontWeight.ultralight}`};
-  transition: box-shadow 0.1s ease, background 0.3s ease, transform 0.1s ease, opacity 0.3s ease;
+  transition: box-shadow 0.1s ease, background 0.3s ease, transform 0.1s ease,
+    opacity 0.3s ease;
   z-index: 2;
 
   :hover {
@@ -218,11 +253,11 @@ const CAButton = styled.button<Button>`
   }
 
   :hover > ${EffectContainer} {
-    opacity: 1
+    opacity: 1;
   }
 
   :hover > ${EffectContainer} > ${CircleTopLeft1} {
-    animation: ${SlowMoTopLeft1} 2s cubic-bezier(.73,.01,.09,.7) forwards ;
+    animation: ${SlowMoTopLeft1} 2s cubic-bezier(0.73, 0.01, 0.09, 0.7) forwards;
   }
 
   :hover > ${EffectContainer} > ${CircleTopLeft2} {
@@ -234,7 +269,8 @@ const CAButton = styled.button<Button>`
   }
 
   :hover > ${EffectContainer} > ${CircleBottomRight1} {
-    animation: ${SlowMoBottomRight1} 2s cubic-bezier(.73,.01,.09,.7) forwards ;
+    animation: ${SlowMoBottomRight1} 2s cubic-bezier(0.73, 0.01, 0.09, 0.7)
+      forwards;
   }
 
   :hover > ${EffectContainer} > ${CircleBottomRight2} {
@@ -245,7 +281,7 @@ const CAButton = styled.button<Button>`
     animation: ${SlowMoBottomRight3} 0.6s 1.2s ease-out forwards;
   }
 
-  :hover + ${EffectContainer}, {
+  :hover + ${EffectContainer} {
     background-color: ${({ theme }) => rgba(theme.colors.accent, 0.5)};
   }
 
@@ -259,32 +295,37 @@ const CAButton = styled.button<Button>`
   }
 `;
 
-
-
 const GooeyButton: React.FC<Button> = (props: Button) => {
-  const { handleClick, children, rounded } = props;
+  const { handleClick, children, borderRadius } = props;
 
   return (
     <>
       <Goo xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
           <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+              result="goo"
+            />
             <feComposite in="SourceGraphic" in2="goo" />
           </filter>
         </defs>
       </Goo>
 
       <CAButton onClick={handleClick} type="button" {...props}>
-        <ButtonContainer>
-          {children}
-        </ButtonContainer>
+        <ButtonContainer>{children}</ButtonContainer>
         <EffectContainer>
           <CircleTopLeft1 />
           <CircleTopLeft2 />
           <CircleTopLeft3 />
-          <EffectButton rounded={!!rounded} />
+          <EffectButton borderRadius={borderRadius} />
           <CircleBottomRight1 />
           <CircleBottomRight2 />
           <CircleBottomRight3 />

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeroIcon from '../../../assets/icons/Hero';
 import { Hero } from '../../organisms';
-import { Typography, GooeyButton } from '../../atoms';
+import { GooeyButton, Typography } from '../../atoms';
 import LogoAlternate from '../../../assets/illustrations/LogoAlternate';
 
 const Link = styled.a`
@@ -19,7 +19,7 @@ const Homepage: React.FC = () => {
         heading="Arslaan Qadus"
         subHeading="Front End Developer"
         description={
-          <Typography headingColor>
+          <Typography variant="heading">
             Living in Manchester and Working @{' '}
             <Link href="https://www.connexone.co.uk">ConnexOne</Link>
           </Typography>

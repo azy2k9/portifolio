@@ -15,7 +15,7 @@ const Heading: React.FC<Props> = ({
   color1,
   color2,
   fullWidth,
-  variant
+  variant,
 }: Props) => {
   return (
     <>

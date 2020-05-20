@@ -9,9 +9,7 @@ export default {
 };
 
 export const DefaultHeading = () => (
-  <Heading>
-    This is a default heading
-  </Heading>
+  <Heading>This is a default heading</Heading>
 );
 
 export const HeadingWithGradient = () => (

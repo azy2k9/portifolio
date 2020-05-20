@@ -7,7 +7,7 @@ interface Props {
 
 const Heading: React.FC<Props> = ({ children }: Props) => {
   return (
-    <Typography headingSize headingColor>
+    <Typography size="large" variant="heading" weight="bold">
       {children}
     </Typography>
   );

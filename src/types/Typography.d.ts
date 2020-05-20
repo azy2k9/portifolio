@@ -1,6 +1,6 @@
 type Typography = {
-  headingSize?: boolean;
-  headingColor?: boolean;
-  primary?: boolean;
   children: React.ReactNode;
+  weight?: string;
+  size?: string;
+  variant?: string;
 };

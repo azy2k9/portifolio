@@ -9,7 +9,7 @@ const global = {
       large: Math.ceil(18 * 1.5),
       base: 18,
       small: Math.ceil(18 * 0.85),
-      smallest: Math.ceil(18 * 0.85),
+      smallest: Math.ceil(18 * 0.5),
     },
     fontWeight: {
       ultralight: 100,

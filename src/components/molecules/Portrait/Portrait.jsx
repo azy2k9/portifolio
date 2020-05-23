@@ -17,15 +17,15 @@ import {
 import Avatar from '../../../assets/illustrations/Avatar';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const transBGGradient = (x, y) => `translate3d(${x / 40}px,${y / 40}px,0)`;
-const transRectanglePurple = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
-const transSquareBlue = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
-const transPolygonGreen = (x, y) => `translate3d(${x / 70}px,${y / 70}px,0)`;
-const transElipsePurple = (x, y) => `translate3d(${x / 80}px,${y / 80}px,0)`;
+const transBGGradient = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+const transRectanglePurple = (x, y) => `translate3d(${x / 15}px,${y / 35}px,0)`;
+const transSquareBlue = (x, y) => `translate3d(${x / 10}px,${y / 6 - 10}px,0)`;
+const transPolygonGreen = (x, y) => `translate3d(${x / 30}px,${y / 30}px,0)`;
+const transElipsePurple = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
 const transElipseBlue = (x, y) => `translate3d(${x / 36}px,${y / 36}px,0)`;
-const transBGWhite = (x, y) => `translate3d(${x / 60}px,${y / 60}px,0)`;
-const transSquareYellow = (x, y) => `translate3d(${x / 70}px,${y / 70}px,0)`;
-const transRectangleBlue = (x, y) => `translate3d(${x / 64}px,${y / 64}px,0)`;
+const transBGWhite = (x, y) => `translate3d(${x / 20}px,${y / 20}px,0)`;
+const transSquareYellow = (x, y) => `translate3d(${x / 30}px,${y / 30}px,0)`;
+const transRectangleBlue = (x, y) => `translate3d(${x / 34}px,${y / 34}px,0)`;
 const transTriangleYellow = (x, y) => `translate3d(${x / 36}px,${y / 36}px,0)`;
 const transTriangleBlue = (x, y) => `translate3d(${x / 40}px,${y / 40}px,0)`;
 
@@ -118,12 +118,12 @@ const Portrait: React.FC = () => {
         style={{ transform: springProps.xy.interpolate(transElipseBlue) }}
       >
         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle opacity="0.5" cx="19.5" cy="19.5" r="14" stroke="url(#paint0_linear_ElipseBlue)" strokeWidth="11" />
+          <circle cx="19.5" cy="19.5" r="14" stroke="url(#paint0_linear_ElipseBlue)" strokeWidth="11" />
           <defs>
             <linearGradient id="paint0_linear_ElipseBlue" x1="39" y1="0" x2="0" y2="39" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#B37FEB" />
-              <stop offset="0.489583" stopColor="#40A9FF" />
-              <stop offset="1" stopColor="#5CDBD3" />
+              <stop stopColor="#B5F5EC" />
+              <stop offset="0.489583" stopColor="#91D5FF" />
+              <stop offset="1" stopColor="#B5F5EC" />
             </linearGradient>
           </defs>
         </svg>

@@ -39,11 +39,10 @@ export const RectangleBlue = styled(animated.div)`
 export const RectanglePurple = styled(animated.div)`
   border-radius: 6px;
   bottom: 0%;
-  left: 57%;
+  left: 62%;
   opacity: 0.4;
   position: absolute;
-  right: 6%;
-  top: 121%;
+  top: 82%;
   filter: drop-shadow(4px 4px 7px rgba(171, 86, 146, 0.2));
 `;
 
@@ -59,11 +58,10 @@ export const SquareYellow = styled(animated.div)`
 export const SquareBlue = styled(animated.div)`
   border-radius: 6px;
   bottom: 64.06%;
-  left: -2%;
+  left: 52%;
   opacity: 0.5;
   position: absolute;
-  right: 87%;
-  top: 25%;
+  top: 65%;
   filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.34));
 `;
 
@@ -88,11 +86,10 @@ export const BGWhite = styled(animated.div)`
 
 export const ElipseBlue = styled(animated.div)`
   bottom: 10%;
-  left: 51%;
-  opacity: 0.5;
+  left: 20%;
+  opacity: 0.3;
   position: absolute;
-  right: 40%;
-  top: 82%;
+  top: 84%;
   filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.34));
 `;
 
@@ -125,4 +122,8 @@ export const BGGradient = styled(animated.div)`
   right: 8%;
   top: 11%;
   filter: drop-shadow(4px 4px 16px rgba(62, 166, 248,0.64));
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
 `;

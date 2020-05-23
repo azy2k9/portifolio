@@ -29,7 +29,7 @@ const transRectangleBlue = (x, y) => `translate3d(${x / 34}px,${y / 34}px,0)`;
 const transTriangleYellow = (x, y) => `translate3d(${x / 36}px,${y / 36}px,0)`;
 const transTriangleBlue = (x, y) => `translate3d(${x / 40}px,${y / 40}px,0)`;
 
-const Portrait: React.FC = () => {
+const Portrait = () => {
 
   const [springProps, setSpring] = useSpring(() =>
     ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }));

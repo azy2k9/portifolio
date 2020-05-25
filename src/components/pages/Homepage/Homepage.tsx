@@ -10,7 +10,7 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
-const Homepage: React.FC = () => {
+const Homepage: React.FC = (props) => {
   return (
     <>
       <Hero

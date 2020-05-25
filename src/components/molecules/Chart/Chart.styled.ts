@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledChart = styled.div`
-.recharts-wrapper {
+  .recharts-wrapper {
     height: 100vh !important;
     width: 100vw !important;
     .recharts-surface {
@@ -13,4 +13,4 @@ export const StyledChart = styled.div`
       }
     }
   }
-`; 
+`;

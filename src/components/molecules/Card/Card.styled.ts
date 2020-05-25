@@ -1,50 +1,87 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
+import { renderToStaticMarkup } from 'react-dom/server';
 
-export const CardContainer = styled.div`
+interface Props {
+  illustration?: React.ReactElement;
+  theme: DefaultTheme;
+}
+
+const renderBackgroud = ({ theme, illustration }: Props) => {
+  if (illustration) {
+    const svgString = encodeURIComponent(renderToStaticMarkup(illustration));
+    const dataUri = `url('data:image/svg+xml,${svgString}')`;
+    return `${dataUri} no-repeat center`;
+  }
+
+  return theme.colors.white;
+};
+
+export const CardContainer = styled.div<Props>`
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.white};
+  background: ${(props: Props) => renderBackgroud(props)};
+  background-size: ${({ illustration }: Props) => illustration && 'cover'};
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 75px;
+
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
+    align-items: center;
+    justify-content: space-around;
+    padding: 35px 0px;
+    background-size: 120rem;
+  }
 `;
 
 export const HeaderContainer = styled.div`
-  position: absolute;
-  left: 10.94%;
-  top: 6.93%;
-`;
-
-export const AlignentContainer = styled.div`
   width: 300px;
-`;
 
-export const IllustrationContainer = styled.div`
-  position: absolute;
-  left: 10.94%;
-  right: 10.94%;
-  top: 25.08%;
-  bottom: 36.63%;
-
-  svg {
-    width: 100%;
-    height: 100%;
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
+    text-align: center;
   }
 `;
 
 export const CardContent = styled.div`
-  position: absolute;
-  left: 10.94%;
-  right: 10.94%;
-  top: 67.66%;
-  bottom: 21.78%;
-`;
-
-export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px;
-
-  position: absolute;
-  left: 31.2%;
-  right: 36.67%;
-  top: 83.66%;
-  bottom: 9.74%;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
 `;
+
+export const CardContentText = styled.div`
+  width: 80%;
+`;
+
+// export const IllustrationContainer = styled.div`
+//    position: absolute;
+//   left: 10.94%;
+//   right: 10.94%;
+//   top: 25.08%;
+//   bottom: 36.63%;
+
+//    svg {
+//     width: 100%;
+//     height: 100%;
+//   }
+// `;
+
+// export const CardContentText = styled.div`
+//   position: absolute;
+//   left: 10.94%;
+//   right: 10.94%;
+//   top: 67.66%;
+//   bottom: 21.78%;
+// `;
+
+// export const ButtonContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   padding: 0px;
+
+//   position: absolute;
+//   left: 31.2%;
+//   right: 36.67%;
+//   top: 83.66%;
+//   bottom: 9.74%;
+// `;

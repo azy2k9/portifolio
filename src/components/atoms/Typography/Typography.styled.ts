@@ -98,8 +98,8 @@ const fontColor = ({ theme, variant }: Props): string => {
 };
 
 export const TypographyContainer = styled.span<Typography>`
-  font-weight: ${(props: Props) => fontWeight(props)};
-  font-size: ${(props: Props) => `${fontSize(props)}px`};
   color: ${(props: Props) => fontColor(props)};
+  font-size: ${(props: Props) => `${fontSize(props)}px`};
+  font-weight: ${(props: Props) => fontWeight(props)};
   letter-spacing: 0.05rem;
 `;

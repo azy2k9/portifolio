@@ -3,27 +3,27 @@ import styled from 'styled-components';
 import { Heading, Typography } from '../../atoms';
 
 const Container = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   .hero-icon {
-    width: 500px;
     height: 500px;
+    width: 500px;
 
     @media ${({ theme }) => theme.mediaQueries.mobile} {
-      width: 350px;
       height: 350px;
+      width: 350px;
     }
   }
 `;
 
 const HeroInfoContainer = styled.div`
-  display: flex;
-  width: 100%;
   align-items: flex-start;
-  padding-left: 5rem;
+  display: flex;
   flex-direction: column;
+  padding-left: 5rem;
+  width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
     padding-left: 3.5rem;
@@ -35,8 +35,8 @@ const TextContainer = styled.div`
 `;
 
 const CustomTypographyContainer = styled.div`
-  width: 100%;
   padding-bottom: 24px;
+  width: 100%;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
     width: 250px;
@@ -44,8 +44,8 @@ const CustomTypographyContainer = styled.div`
 `;
 
 const ButtonsContainer = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
 `;
 
 const Hero: React.FC<Hero> = ({

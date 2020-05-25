@@ -6,41 +6,47 @@ const SlowMoTopLeft1 = keyframes`
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   10% {
     transform: translate(0, 0) scale(1.2) rotate(-45deg);
   }
+
   60% {
-    transform: translate(-18px, -16px) rotate(-45deg) scale(1, 1.2);
     opacity: 1;
+    transform: translate(-18px, -16px) rotate(-45deg) scale(1, 1.2);
   }
+
   70% {
     transform: translate(-38px, -36px) rotate(-45deg) scale(1, 0.6);
   }
+
   100% {
-    transform: translate(-58px, -56px) rotate(-45deg) scale(1, 0.9);
     opacity: 0;
+    transform: translate(-58px, -56px) rotate(-45deg) scale(1, 0.9);
   }
 `;
 
 const SlowMoTopLeft2 = keyframes`
   0% {
-    transform: translate(-20px, 0px) scale(0);
     opacity: 1;
+    transform: translate(-20px, 0) scale(0);
   }
+
   100% {
-    transform: translate(-64px, 10px) scale(-0.2);
     opacity: 0;
+    transform: translate(-64px, 10px) scale(-0.2);
   }
 `;
 
 const SlowMoTopLeft3 = keyframes`
   0% {
-    transform: translate(-12px, -20px) scale(0);
     opacity: 1;
+    transform: translate(-12px, -20px) scale(0);
   }
+
   100% {
-    transform: translate(14px, -30px) scale(-0.2);
     opacity: 0;
+    transform: translate(14px, -30px) scale(-0.2);
   }
 `;
 
@@ -48,145 +54,156 @@ const SlowMoBottomRight1 = keyframes`
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   10% {
     transform: translate(0, 0) scale(1.2) rotate(-45deg);
   }
+
   60% {
-    transform: translate(18px, 16px) rotate(-45deg) scale(1, 1.2);
     opacity: 1;
+    transform: translate(18px, 16px) rotate(-45deg) scale(1, 1.2);
   }
+
   70% {
     transform: translate(38px, 36px) rotate(-45deg) scale(1, 0.6);
   }
+
   100% {
-    transform: translate(42px, 42px) rotate(-45deg) scale(1, 0.6);
     opacity: 0;
+    transform: translate(42px, 42px) rotate(-45deg) scale(1, 0.6);
   }
 `;
 
 const SlowMoBottomRight2 = keyframes`
   0% {
-    transform: translate(20px, 0px) scale(0);
     opacity: 1;
+    transform: translate(20px, 0) scale(0);
   }
+
   100% {
-    transform: translate(64px, 10px) scale(-0.2);
     opacity: 0;
+    transform: translate(64px, 10px) scale(-0.2);
   }
 `;
 
 const SlowMoBottomRight3 = keyframes`
   0% {
-    transform: translate(12px, 20px) scale(0);
     opacity: 1;
+    transform: translate(12px, 20px) scale(0);
   }
+
   100% {
-    transform: translate(-24px, 40px) scale(-0.2);
     opacity: 0;
+    transform: translate(-24px, 40px) scale(-0.2);
   }
 `;
 
 const EffectContainer = styled.span`
-  position: absolute;
   display: block;
-  width: 200%;
+
+  /* prettier-ignore */
+  filter: url("#goo");
   height: 400%;
-  top: -150%;
   left: -50%;
   opacity: 0;
-  filter: url('#goo');
-  transition: all 0.1s ease-out, opacity 0.1s ease;
   pointer-events: none;
+  position: absolute;
+  top: -150%;
+  transition: all 0.1s ease-out, opacity 0.1s ease;
+  width: 200%;
   z-index: 1;
 `;
 
 const CircleTopLeft1 = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.accent};
-  top: 40%;
+  border-radius: 15px;
+  height: 25px;
   left: 27%;
+  position: absolute;
+  top: 40%;
+  width: 25px;
 `;
 
 const CircleTopLeft2 = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.accent};
-  top: 40%;
+  border-radius: 15px;
+  height: 25px;
   left: 27%;
+  position: absolute;
+  top: 40%;
+  width: 25px;
 `;
 
 const CircleTopLeft3 = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.accent};
-  top: 40%;
+  border-radius: 15px;
+  height: 25px;
   left: 27%;
+  position: absolute;
+  top: 40%;
+  width: 25px;
 `;
 
 const CircleBottomRight1 = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.accent};
+  border-radius: 15px;
   bottom: 40%;
+  height: 25px;
+  position: absolute;
   right: 27%;
+  width: 25px;
 `;
 
 const CircleBottomRight2 = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.accent};
+  border-radius: 15px;
   bottom: 40%;
+  height: 25px;
+  position: absolute;
   right: 27%;
+  width: 25px;
 `;
 
 const CircleBottomRight3 = styled.span`
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
   background-color: ${({ theme }) => theme.colors.accent};
+  border-radius: 15px;
   bottom: 40%;
+  height: 25px;
+  position: absolute;
   right: 27%;
+  width: 25px;
 `;
 
 const EffectButton = styled.span<{ borderRadius?: string }>`
   background-color: ${({ theme }) => theme.colors.accent};
-  color: ${({ theme }) => theme.colors.white};
   border: 0;
-  border-radius: ${({ borderRadius }) =>
-    borderRadius === 'rounded' && '9999px'};
+  /* stylelint-disable */
+  /* prettier-ignore */
+  border-radius:
+    ${({ borderRadius }) => borderRadius === 'rounded' && '9999px'};
+  /* stylelint-enable */
+  color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
-  letter-spacing: 0.1rem;
-  padding: 8px 30px;
-  outline: none;
   font-size: ${({ theme }) => `${theme.font.fontSize.small}px`};
   font-weight: ${({ theme }) => `${theme.font.fontWeight.ultralight}`};
-  position: absolute;
-  width: 50%;
   height: 25%;
-  top: 50%;
   left: 25%;
-  z-index: -1;
+  letter-spacing: 0.1rem;
+  outline: none;
+  padding: 8px 30px;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   transition: background 0.3s ease, opacity 0.3s ease;
+  width: 50%;
+  z-index: -1;
 `;
 
 const Goo = styled.svg`
+  height: 1px;
   position: absolute;
   visibility: hidden;
   width: 1px;
-  height: 1px;
 `;
 
 const ButtonContainer = styled.span`
@@ -228,27 +245,40 @@ const variantColor = ({ variant, theme }: Styles) => {
 
 const CAButton = styled.button<Button>`
   background-color: ${(props: Styles) => variantColor(props)[0]};
-  color: ${(props: Styles) => variantColor(props)[1]};
   border: 0;
+  /* stylelint-disable */
+  /* prettier-ignore-start */
+  border-radius:
+    ${({ borderRadius }: Styles) => borderRadius === 'rounded' && '9999px'};
+  /* prettier-ignore-end */
+  /* stylelint-enable */
   box-shadow: 0 2px 8px -1px ${({ theme }) => rgba(theme.colors.primary, 0.4)};
-  border-radius: ${({ borderRadius, children }: Styles) =>
-    borderRadius === 'rounded' && children && '9999px'};
+  color: ${(props: Styles) => variantColor(props)[1]};
   cursor: pointer;
   display: flex;
-  letter-spacing: 0.1rem;
-  padding: 8px 30px;
-  position: relative;
-  outline: none;
   font-size: ${({ theme }) => `${theme.font.fontSize.small}px`};
   font-weight: ${({ theme }) => `${theme.font.fontWeight.ultralight}`};
-  transition: box-shadow 0.1s ease, background 0.3s ease, transform 0.1s ease,
+  letter-spacing: 0.1rem;
+  outline: none;
+  padding: 8px 30px;
+  position: relative;
+
+  /* prettier-ignore */
+  transition:
+    box-shadow 0.1s ease,
+    background 0.3s ease,
+    transform 0.1s ease,
     opacity 0.3s ease;
   z-index: 2;
 
   :hover {
-    border: 0;
     background-color: ${({ theme }) => theme.colors.accent};
-    box-shadow: 0 4px 20px -2px ${({ theme }) => rgba(theme.colors.accent, 0.5)};
+    border: 0;
+    /* stylelint-disable */
+    /* prettier-ignore */
+    box-shadow:
+      0 4px 20px -2px ${({ theme }) => rgba(theme.colors.accent, 0.5)};
+    /* stylelint-enable */
     transform: scale(1.05);
   }
 
@@ -269,8 +299,9 @@ const CAButton = styled.button<Button>`
   }
 
   :hover > ${EffectContainer} > ${CircleBottomRight1} {
-    animation: ${SlowMoBottomRight1} 2s cubic-bezier(0.73, 0.01, 0.09, 0.7)
-      forwards;
+    animation:
+      ${SlowMoBottomRight1}
+      2s cubic-bezier(0.73, 0.01, 0.09, 0.7) forwards;
   }
 
   :hover > ${EffectContainer} > ${CircleBottomRight2} {

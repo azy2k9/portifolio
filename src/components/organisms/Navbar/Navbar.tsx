@@ -11,28 +11,29 @@ const slideDown = keyframes`
 
 const Container = styled.div<Props>`
   animation: ${slideDown} 0.3s ease forwards;
-  display: flex;
   color: ${({ theme }) => theme.colors.headline};
-  width: 300px;
+  display: flex;
   justify-content: space-evenly;
   padding-right: 12px;
+  width: 300px;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
-    flex-direction: column;
     align-items: center;
-    width: 100vw;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.headline};
+    flex-direction: column;
     height: 100%;
-    padding-right: 0px;
+    padding-bottom: 8px;
+    padding-right: 0;
+    position: relative;
+    transform: translateY(-100%);
+    width: 100vw;
+    z-index: 0;
+
     svg,
     span {
       padding: 8px;
     }
-    background-color: ${({ theme }) => theme.colors.primary};
-    padding-bottom: 8px;
-    transform: translateY(-100%);
-    z-index: 0;
-    position: relative;
-    color: ${({ theme }) => theme.colors.headline};
 
     svg {
       height: 48px;

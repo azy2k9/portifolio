@@ -10,12 +10,12 @@ interface WrapperProps {
 }
 
 const MobileContainer = styled.div<WrapperProps>`
-  flex-grow: 1;
+  bottom: 0;
   display: none;
-  z-index: 100;
+  flex-grow: 1;
   position: absolute;
   top: 64px;
-  bottom: 0;
+  z-index: 100;
   @media ${({ theme }) => theme.mediaQueries.mobile} {
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   }

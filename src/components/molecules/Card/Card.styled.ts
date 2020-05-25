@@ -17,19 +17,19 @@ const renderBackgroud = ({ theme, illustration }: Props) => {
 };
 
 export const CardContainer = styled.div<Props>`
-  height: 100%;
-  background: ${(props: Props) => renderBackgroud(props)};
+  background-color: ${(props: Props) => renderBackgroud(props)};
   background-size: ${({ illustration }: Props) => illustration && 'cover'};
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: 75px;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
     align-items: center;
-    justify-content: space-around;
-    padding: 35px 0px;
     background-size: 120rem;
+    justify-content: space-around;
+    padding: 35px 0;
   }
 `;
 
@@ -42,11 +42,11 @@ export const HeaderContainer = styled.div`
 `;
 
 export const CardContent = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   height: 100%;
+  justify-content: space-around;
 `;
 
 export const CardContentText = styled.div`

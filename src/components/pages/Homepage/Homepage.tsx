@@ -25,12 +25,7 @@ const Homepage: React.FC = (props) => {
           </Typography>
         }
         primaryButton={
-          <GooeyButton
-            borderRadius="rounded"
-            handleClick={() => console.log('hello')}
-          >
-            Hire Me
-          </GooeyButton>
+          <GooeyButton borderRadius="rounded">Hire Me</GooeyButton>
         }
       />
     </>

@@ -5,22 +5,22 @@ const HamburgerContainer = styled.div`
   display: none;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
+    cursor: pointer;
     display: unset;
     position: absolute;
     right: 10px;
-    cursor: pointer;
   }
 `;
 
 const StyledHamburgerIcon = styled.svg<Props>`
   .line {
-    fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+    fill: transparent;
     stroke: ${({ theme }) => theme.colors.paragraph};
-    stroke-width: 5.5;
     stroke-linecap: round;
+    stroke-width: 5.5;
     transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
     transform-origin: 50% 50%;
+    transition: stroke-dasharray 0.4s, stroke-dashoffset 0.4s, transform 0.4s;
   }
 
   .top {

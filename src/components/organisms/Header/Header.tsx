@@ -5,18 +5,18 @@ import LogoIcon from '../../../assets/illustrations/Logo';
 import HamburgerButton from '../../atoms/HamburgerButton';
 
 const Container = styled.div`
-  height: 64px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.secondary};
   align-items: center;
-  padding-left: 33px;
   background-color: ${({ theme }) => theme.colors.white};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.secondary};
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  padding-left: 33px;
   z-index: 1000;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
-    padding-left: 0px;
     justify-content: center;
+    padding-left: 0;
   }
 `;
 

@@ -52,36 +52,3 @@ export const CardContent = styled.div`
 export const CardContentText = styled.div`
   width: 80%;
 `;
-
-// export const IllustrationContainer = styled.div`
-//    position: absolute;
-//   left: 10.94%;
-//   right: 10.94%;
-//   top: 25.08%;
-//   bottom: 36.63%;
-
-//    svg {
-//     width: 100%;
-//     height: 100%;
-//   }
-// `;
-
-// export const CardContentText = styled.div`
-//   position: absolute;
-//   left: 10.94%;
-//   right: 10.94%;
-//   top: 67.66%;
-//   bottom: 21.78%;
-// `;
-
-// export const ButtonContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   padding: 0px;
-
-//   position: absolute;
-//   left: 31.2%;
-//   right: 36.67%;
-//   top: 83.66%;
-//   bottom: 9.74%;
-// `;

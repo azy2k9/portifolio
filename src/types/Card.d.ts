@@ -1,6 +1,7 @@
 type Card = {
+  isSkillCard?: boolean;
   heading: string;
   illustration: React.ReactComponentElement;
-  description: string;
-  button: React.ReactComponentElement;
+  children: string | React.ReactNode;
+  button?: React.ReactComponentElement;
 };

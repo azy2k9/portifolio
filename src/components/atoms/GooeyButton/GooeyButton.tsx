@@ -100,6 +100,8 @@ const SlowMoBottomRight3 = keyframes`
 
 const EffectContainer = styled.span`
   display: block;
+
+  /* prettier-ignore */
   filter: url("#goo");
   height: 400%;
   left: -50%;
@@ -175,9 +177,11 @@ const CircleBottomRight3 = styled.span`
 const EffectButton = styled.span<{ borderRadius?: string }>`
   background-color: ${({ theme }) => theme.colors.accent};
   border: 0;
+  /* stylelint-disable */
+  /* prettier-ignore */
   border-radius:
-    ${({ borderRadius }) =>
-    borderRadius === 'rounded' && '9999px'};
+    ${({ borderRadius }) => borderRadius === 'rounded' && '9999px'};
+  /* stylelint-enable */
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   font-size: ${({ theme }) => `${theme.font.fontSize.small}px`};
@@ -242,9 +246,12 @@ const variantColor = ({ variant, theme }: Styles) => {
 const CAButton = styled.button<Button>`
   background-color: ${(props: Styles) => variantColor(props)[0]};
   border: 0;
+  /* stylelint-disable */
+  /* prettier-ignore-start */
   border-radius:
-    ${({ borderRadius, children }: Styles) =>
-    borderRadius === 'rounded' && children && '9999px'};
+    ${({ borderRadius }: Styles) => borderRadius === 'rounded' && '9999px'};
+  /* prettier-ignore-end */
+  /* stylelint-enable */
   box-shadow: 0 2px 8px -1px ${({ theme }) => rgba(theme.colors.primary, 0.4)};
   color: ${(props: Styles) => variantColor(props)[1]};
   cursor: pointer;
@@ -255,6 +262,8 @@ const CAButton = styled.button<Button>`
   outline: none;
   padding: 8px 30px;
   position: relative;
+
+  /* prettier-ignore */
   transition:
     box-shadow 0.1s ease,
     background 0.3s ease,
@@ -265,7 +274,11 @@ const CAButton = styled.button<Button>`
   :hover {
     background-color: ${({ theme }) => theme.colors.accent};
     border: 0;
-    box-shadow: 0 4px 20px -2px ${({ theme }) => rgba(theme.colors.accent, 0.5)};
+    /* stylelint-disable */
+    /* prettier-ignore */
+    box-shadow:
+      0 4px 20px -2px ${({ theme }) => rgba(theme.colors.accent, 0.5)};
+    /* stylelint-enable */
     transform: scale(1.05);
   }
 
@@ -286,7 +299,9 @@ const CAButton = styled.button<Button>`
   }
 
   :hover > ${EffectContainer} > ${CircleBottomRight1} {
-    animation: ${SlowMoBottomRight1} 2s cubic-bezier(0.73, 0.01, 0.09, 0.7) forwards;
+    animation:
+      ${SlowMoBottomRight1}
+      2s cubic-bezier(0.73, 0.01, 0.09, 0.7) forwards;
   }
 
   :hover > ${EffectContainer} > ${CircleBottomRight2} {

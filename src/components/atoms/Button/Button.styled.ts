@@ -35,9 +35,11 @@ const variantColor = ({ variant, theme }: Styles) => {
 const StyledButton = styled.button<Button>`
   background-color: ${(props: Styles) => variantColor(props)[0]};
   border: 0;
+
+  /* prettier-ignore */
   border-radius:
     ${({ borderRadius, children }: Styles) =>
-    borderRadius === 'rounded' && children && '9999px'};
+      borderRadius === 'rounded' && children && '9999px'};
   box-shadow: 0 2px 8px -1px ${({ theme }) => rgba(theme.colors.primary, 0.4)};
   color: ${(props: Styles) => variantColor(props)[1]};
   cursor: pointer;
@@ -53,9 +55,13 @@ const StyledButton = styled.button<Button>`
     transform 0.3s ease;
 
   :hover {
-    background-color: ${(props: Styles) => lighten(0.05, variantColor(props)[0])};
-    border: 0;
-    box-shadow: 0 4px 20px -2px ${({ theme }) => rgba(theme.colors.primary, 0.5)};
+    background: ${(props: Styles) => lighten(0.05, variantColor(props)[0])};
+    border-width: 0;
+    /* stylelint-disable */
+    /* prettier-ignore */
+    box-shadow:
+      0 4px 20px -2px ${({ theme }) => rgba(theme.colors.primary, 0.5)};
+    /* stylelint-enable */
     transform: scale(1.05);
   }
 `;

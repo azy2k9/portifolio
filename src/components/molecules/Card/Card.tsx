@@ -3,30 +3,40 @@ import { Heading, Typography } from '../../atoms';
 import {
   CardContainer,
   HeaderContainer,
-  IllustrationContainer,
-  AlignentContainer,
+  CardContentText,
   CardContent,
-  ButtonContainer,
 } from './Card.styled';
 
 const Card: React.FC<Card> = ({
+  isSkillCard,
   heading,
   illustration,
-  description,
+  children,
   button,
 }: Card) => {
+  if (isSkillCard) {
+    return (
+      <CardContainer illustration={illustration}>
+        <HeaderContainer>
+          <Heading variant="white">{heading}</Heading>
+        </HeaderContainer>
+        <CardContent>{children}</CardContent>
+      </CardContainer>
+    );
+  }
+
   return (
     <CardContainer>
       <HeaderContainer>
-        <AlignentContainer>
-          <Heading>{heading}</Heading>
-        </AlignentContainer>
+        <Heading>{heading}</Heading>
       </HeaderContainer>
-      <IllustrationContainer>{illustration}</IllustrationContainer>
       <CardContent>
-        <Typography>{description}</Typography>
+        {illustration}
+        <CardContentText>
+          <Typography>{children}</Typography>
+        </CardContentText>
+        {button}
       </CardContent>
-      <ButtonContainer>{button}</ButtonContainer>
     </CardContainer>
   );
 };

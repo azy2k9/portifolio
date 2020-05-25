@@ -8,6 +8,4 @@ export default {
   },
 };
 
-export const PortraitAnimation = () => (
-  <Portrait />
-);
+export const PortraitAnimation = () => <Portrait />;

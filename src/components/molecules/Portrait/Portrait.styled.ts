@@ -14,7 +14,7 @@ export const TriangleBlue = styled(animated.div)`
   right: -4%;
   opacity: 0.5;
   top: 65%;
-  filter: drop-shadow(9px 9px 7px rgba(160,226,247,0.33));
+  filter: drop-shadow(9px 9px 7px rgba(160, 226, 247, 0.33));
 `;
 
 export const TriangleYellow = styled(animated.div)`
@@ -23,7 +23,7 @@ export const TriangleYellow = styled(animated.div)`
   position: absolute;
   right: 63%;
   top: 87.85%;
-  filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.34));
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.34));
 `;
 
 export const RectangleBlue = styled(animated.div)`
@@ -33,7 +33,7 @@ export const RectangleBlue = styled(animated.div)`
   position: absolute;
   right: 38%;
   top: 0%;
-  filter: drop-shadow(9px 9px 7px rgba(160,226,247,0.33));
+  filter: drop-shadow(9px 9px 7px rgba(160, 226, 247, 0.33));
 `;
 
 export const RectanglePurple = styled(animated.div)`
@@ -62,7 +62,7 @@ export const SquareBlue = styled(animated.div)`
   opacity: 0.5;
   position: absolute;
   top: 65%;
-  filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.34));
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.34));
 `;
 
 export const BGWhite = styled(animated.div)`
@@ -90,7 +90,7 @@ export const ElipseBlue = styled(animated.div)`
   opacity: 0.3;
   position: absolute;
   top: 84%;
-  filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.34));
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.34));
 `;
 
 export const ElipsePurple = styled(animated.div)`
@@ -100,7 +100,7 @@ export const ElipsePurple = styled(animated.div)`
   position: absolute;
   right: 79%;
   top: 2%;
-  filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.34));
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.34));
 `;
 
 export const PolygonGreen = styled(animated.div)`
@@ -111,7 +111,7 @@ export const PolygonGreen = styled(animated.div)`
   position: absolute;
   right: 2%;
   top: 19%;
-  filter: drop-shadow(4px 4px 7px rgba(0,0,0,0.34));
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.34));
 `;
 
 export const BGGradient = styled(animated.div)`
@@ -121,7 +121,7 @@ export const BGGradient = styled(animated.div)`
   position: absolute;
   right: 8%;
   top: 11%;
-  filter: drop-shadow(4px 4px 16px rgba(62, 166, 248,0.64));
+  filter: drop-shadow(4px 4px 16px rgba(62, 166, 248, 0.64));
   > svg {
     width: 100%;
     height: 100%;

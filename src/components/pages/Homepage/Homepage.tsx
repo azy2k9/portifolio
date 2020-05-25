@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring } from 'react-spring';
 import HeroIcon from '../../../assets/icons/Hero';
 import { Hero } from '../../organisms';
 import { GooeyButton, Typography } from '../../atoms';
@@ -10,7 +11,8 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
-const Homepage: React.FC = () => {
+const Homepage: React.FC = (props) => {
+
   return (
     <>
       <Hero

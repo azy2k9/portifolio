@@ -18,7 +18,8 @@
     "react-scripts": "3.4.1",
     "recharts": "^1.8.5",
     "styled-components": "^5.1.0",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "uuid": "^8.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -62,6 +63,7 @@
     "@storybook/preset-create-react-app": "^2.1.2",
     "@storybook/react": "^5.3.18",
     "@storybook/theming": "^5.3.18",
+    "@types/uuid": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "2.31.0",
     "@typescript-eslint/parser": "2.31.0",
     "babel-eslint": "10.1.0",

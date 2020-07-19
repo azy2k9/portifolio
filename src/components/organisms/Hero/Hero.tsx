@@ -4,8 +4,13 @@ import { Heading, Typography } from '../../atoms';
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  padding: 10vh 15vw;
+
+  @media ${({ theme }) => theme.mediaQueries.mobile} {
+    flex-direction: column-reverse;
+  }
 
   .hero-icon {
     width: 500px;
@@ -22,10 +27,10 @@ const HeroInfoContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: flex-start;
-  padding-left: 5rem;
   flex-direction: column;
 
   @media ${({ theme }) => theme.mediaQueries.mobile} {
+    align-items: center;
     padding-left: 3.5rem;
   }
 `;
@@ -67,7 +72,6 @@ const Hero: React.FC<Hero> = ({
 
   return (
     <Container>
-      {heroImage}
       <HeroInfoContainer>
         {heroLogo}
         <TextContainer>
@@ -85,6 +89,7 @@ const Hero: React.FC<Hero> = ({
           </ButtonsContainer>
         </TextContainer>
       </HeroInfoContainer>
+      <>{heroImage}</>
     </Container>
   );
 };

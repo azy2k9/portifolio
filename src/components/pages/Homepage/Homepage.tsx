@@ -10,9 +10,14 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
+
 const Homepage: React.FC = (props) => {
   return (
-    <>
+    <Container>
       <Hero
         heroImage={<HeroIcon />}
         heroLogo={<LogoAlternate />}
@@ -33,7 +38,7 @@ const Homepage: React.FC = (props) => {
           </GooeyButton>
         }
       />
-    </>
+    </Container>
   );
 };
 

@@ -79,3 +79,16 @@ export const LanguageSkill = () => (
     <Chart data={languagesData} color="#66DFBC" />
   </Card>
 );
+
+// export const ProjectCard = () => (
+//   <Card
+//     isProjectCard
+//     heading="TV Football"
+//     illustration={<Backend />}
+//     tags={['React', 'Redux', 'Material UI']}
+//     button={<Button borderRadius="rounded">More Info</Button>}
+//   >
+//     Through constant development and refinement sessions with clients and
+//     stakeholders, I am able to convey the clients vision into reality.
+//   </Card>
+// );

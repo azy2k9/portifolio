@@ -6,14 +6,29 @@ import {
   CardContentText,
   CardContent,
 } from './Card.styled';
+import Tags from '../../atoms/Tags';
 
 const Card: React.FC<Card> = ({
   isSkillCard,
+  isProjectCard,
   heading,
   illustration,
   children,
   button,
+  tags,
 }: Card) => {
+  if (isProjectCard) {
+    return (
+      <CardContainer illustration={illustration} isProjectCard>
+        <HeaderContainer>
+          <Heading variant="white">{heading}</Heading>
+          <Tags tags={tags} />
+        </HeaderContainer>
+        <CardContent>{children}</CardContent>
+      </CardContainer>
+    );
+  }
+
   if (isSkillCard) {
     return (
       <CardContainer illustration={illustration}>

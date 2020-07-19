@@ -4,6 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 interface Props {
   illustration?: React.ReactElement;
   theme: DefaultTheme;
+  isProjectCard?: boolean;
 }
 
 const renderBackgroud = ({ theme, illustration }: Props) => {
@@ -17,7 +18,8 @@ const renderBackgroud = ({ theme, illustration }: Props) => {
 };
 
 export const CardContainer = styled.div<Props>`
-  height: 100%;
+  height: 50%;
+  width: 50%;
   background: ${(props: Props) => renderBackgroud(props)};
   background-size: ${({ illustration }: Props) => illustration && 'cover'};
   border-radius: 12px;
